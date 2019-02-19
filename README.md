@@ -5,9 +5,9 @@ Maintained by Aluisyo.
 ## Information
 Aluisyo is a fork of Conceal Network, a decentralized banking platform with encrypted messages and own privacy protected cryptocurrency.
 
-Aluisyo is based on the Cryptonote protocol and runs on a secure peer-to-peer network technology to operate with no central authority. You control your private keys to your funds, you control your destiny. Aluisyo Network is accessible by anyone in the world regardless of his/her geographic location or status. Our blockchain is resistant to any kind of analysis. All your CCX transactions and messages are anonymous. Aluisyo Network provides an instant secure, untraceable and unlinkable way of encrypted communication - crypto messages.
+Aluisyo is based on the Cryptonote protocol and runs on a secure peer-to-peer network technology to operate with no central authority. You control your private keys to your funds. Aluisyo Network is accessible by anyone in the world regardless of his/her geographic location or status. Our blockchain is resistant to any kind of analysis. All your transactions and messages are anonymous. Aluisyo Network provides an instant secure, untraceable and unlinkable way of encrypted communication - crypto messages.
 
-Aluisyo is open-source, community driven and truly decentralized. No one owns it, everyone can take part.
+Aluisyo is open-source, community driven and truly decentralized. No one owns it, anyone can take part.
 
 ## Resources
 - Web: [aluisyo.network](https://aluisyo.network/)
