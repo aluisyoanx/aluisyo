@@ -56,4 +56,4 @@ If the build is successful the binaries will be in the src folder.
 If the build is successful the binaries will be in the src/Release folder.
 
 #### Special Thanks
-Special thanks goes out to the developers from Conceal Network, Cryptonote, Bytecoin, Monero, Forknote, TurtleCoin, and Masari.
+Special thanks goes out to the developers from The Circle Team (Conceal Network), Cryptonote, Bytecoin, Monero, Forknote, TurtleCoin, and Masari.
