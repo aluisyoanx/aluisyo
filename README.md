@@ -2,8 +2,11 @@
 Latest Release: v0.0.1
 Maintained by Aluisyo.
 
+## This is Highly Experimental, Use at own Risk!
+
 ## Information
 Aluisyo is a fork of Conceal Network, a decentralized banking platform with encrypted messages and own privacy protected cryptocurrency.
+(No Premine)
 
 Aluisyo is based on the Cryptonote protocol and runs on a secure peer-to-peer network technology to operate with no central authority. You control your private keys to your funds. Aluisyo Network is accessible by anyone in the world regardless of his/her geographic location or status. Our blockchain is resistant to any kind of analysis. All your transactions and messages are anonymous. Aluisyo Network provides an instant secure, untraceable and unlinkable way of encrypted communication - crypto messages.
 
