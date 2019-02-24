@@ -11,4 +11,4 @@ build_script:
     - MSBuild aluisyo.sln /p:Configuration=Release /m
 
 artifacts:
-- path: src\Release\*.exe
+- path: '**\*.zip'
