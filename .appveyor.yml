@@ -9,8 +9,6 @@ build_script:
     - cd build
     - cmake -G "Visual Studio 15 2017 Win64" ..
     - MSBuild aluisyo.sln /p:Configuration=Release /m
-version: 0.0.{build}
-build:
-  verbosity: minimal
+
 artifacts:
 - path: src/Release
