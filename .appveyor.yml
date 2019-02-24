@@ -9,6 +9,8 @@ build_script:
     - cd build
     - cmake -G "Visual Studio 15 2017 Win64" ..
     - MSBuild aluisyo.sln /p:Configuration=Release /m
-
+    
 artifacts:
-- path: build\src\Release\*.exe
+    - path: build\src\Release\*.exe
+name: anx-cli-winx64-v0.0.1
+type: WebDeployPackage
