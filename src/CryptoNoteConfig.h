@@ -121,7 +121,7 @@ const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(50) * parameters::COIN); // max 
 const uint64_t REWARD_INCREASE_INTERVAL				= (UINT64_C(21900)); // aprox. 1 month (+ 0.25 ANX increment per month)
 
 const char     CRYPTONOTE_NAME[]                             	= "aluisyo";
-const char     GENESIS_COINBASE_TX_HEX[]			= "";
+const char     GENESIS_COINBASE_TX_HEX[]			= "010a01ff0001c096b102029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121014d669c1540f08c6af42bcbf50623514a085bf898292cd8e90b6f88c9abeaef94";
 const uint32_t GENESIS_NONCE                         	        = 10000;
 const uint64_t GENESIS_TIMESTAMP				= 1551106337;
 const uint8_t  TRANSACTION_VERSION_1				=  1;
