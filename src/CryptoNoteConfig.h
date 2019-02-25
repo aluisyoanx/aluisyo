@@ -116,7 +116,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      								= "miner_co
 } // parameters
 
 const uint64_t START_BLOCK_REWARD															= (UINT64_C(5000) * parameters::POINT); // start reward 
-const uint64_t FOUNDATION_TRUST																= (UINT64_C(0) * parameters::COIN); // locked funds to secure network  
+const uint64_t FOUNDATION_TRUST																= (UINT64_C(0) * parameters::COIN); // locked funds to secure network  (lol i was drunk asf)
 const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(50) * parameters::COIN); // max reward
 const uint64_t REWARD_INCREASE_INTERVAL				= (UINT64_C(21900)); // aprox. 1 month (+ 0.25 ANX increment per month)
 
