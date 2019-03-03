@@ -8,7 +8,7 @@ matrix:
       addons:
         apt:
             sources:
-            - ubuntu-toolchain-r-test
+            - universe
             packages:
             - g++-4.9
             - libboost1.58-all-dev
