@@ -8,11 +8,14 @@ matrix:
       addons:
         apt:
             sources:
-            - universe
+            - ubuntu-toolchain-r-test
             packages:
             - g++-4.9
             - libboost1.58-all-dev
-            
+before_install:
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+  - sudo apt-get update -q
+  - sudo apt-get install libboost1.58-all-dev g++-4.9 -y            
 script:
     - mkdir build
     - cd build
