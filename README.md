@@ -5,22 +5,23 @@ Maintained by Aluisyo.
 ## Warning: This is Highly Experimental for testing purposes, Use at own Risk!
 
 ## Information
-Aluisyo
+### Aluisyo
+
 The Future Of Blockchain Banking
 
 Aluisyo is a decentralized cryptocurrency based on cryptonote with blockchain banking features and secure messaging.
 Aluisyo is a fairly launched coin without any premine, ico or dev fee.
 
-Coin Name: Aluisyo
-Genesis Date: 25-02-19
-Ticker: ANX
-Address Prefix: aNX
-POW Algo: Cryptonight Original
-Max Supply: 200milion
-Block Reward: smoothly increasing, starting from 5 all the way up-to 50
-Ports:
-P2P: 18001
-RPC: 19000
+- Coin Name: Aluisyo
+- Genesis Date: 25-02-19
+- Ticker: ANX
+- Address Prefix: aNX
+- POW Algo: Cryptonight Original
+- Max Supply: 200milion
+- Block Reward: smoothly increasing, starting from 5 all the way up-to 50
+- Ports:
+- P2P: 18001
+- RPC: 19000
 
 
 ## Resources
