@@ -1,5 +1,5 @@
 # Aluisyo Core (CLI)
-Latest Release: v0.0.1
+Latest Release: v0.0.2
 Maintained by Aluisyo.
 
 ## Warning: This is Highly Experimental for testing purposes, Use at own Risk!
@@ -28,6 +28,17 @@ Aluisyo is a fairly launched coin without any premine, ico or dev fee.
 - Web: [aluisyo.network](https://aluisyo.network/)
 - GitHub: [https://github.com/aluisyonetwork/aluisyo-core](https://github.com/aluisyonetwork/aluisyo-core)
 - Discord: [https://discord.gg/rbyNZRz](https://discord.gg/rbyNZRz)
+- Our BitcoinTalk: https://bitcointalk.org/index.php?topic=5114934
+- Our Telegram: https://t.me/joinchat/I5RElgnalLDhSHTQBjSluA
+
+### [Block Explorers] 
+- https://explorer.aluisyo.network/
+- https://node.aluisyo.network/
+
+### [Pools] 
+- https://cnpool.cc/anx
+- https://coinsforhash.com/aluisyo/
+
 
 ## Compiling Aluisyo from source
 
