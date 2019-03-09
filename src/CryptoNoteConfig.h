@@ -181,7 +181,11 @@ __attribute__((unused))
 
 // Blockchain Checkpoints:
 // {<block height>, "<block hash>"},
-const std::initializer_list<CheckpointData> CHECKPOINTS = {};
+const std::initializer_list<CheckpointData> CHECKPOINTS = {
+	{0, "5d3ae87eb5dc2833698423eb29b83c68f66e4f3bd9c6130860412f85a8bc4af5"},
+	{1000, "ce05d06605894474501455c03ca170d3f6503f39055f6cc8c7a791e823721305"},
+	{5000, "056144a6af9a457afd32094bd1be263f3610854b76bca742b6710cde9486b075"}
+};
 
 } // CryptoNote
 
