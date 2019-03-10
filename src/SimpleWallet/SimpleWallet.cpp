@@ -719,11 +719,13 @@ bool simple_wallet::init(const boost::program_options::variables_map& vm) {
   if (m_generate_new.empty() && m_wallet_file_arg.empty()) {
     std::cout << "  " << ENDL
 	  << "  " << ENDL
-      << " //     _    _    _   _ ___ ______   _____   " << ENDL
-      << " //    / \  | |  | | | |_ _/ ___\ \ / / _ \  " << ENDL
-      << " //   / _ \ | |  | | | || |\___ \\ V / | | | " << ENDL
-      << " //  / ___ \| |___ |_| || | ___) || || |_| | " << ENDL
-      << " // /_/   \_\_____\___/|___|____/ |_| \___/  " << ENDL                                     
+	  << " //    @    @       @     @ @@@  @@@@@  @     @ @@@@@@@ " << ENDL
+	  << " //   @ @   @       @     @  @  @     @  @   @  @     @ " << ENDL
+	  << " //  @   @  @       @     @  @  @         @ @   @     @ " << ENDL
+	  << " // @     @ @       @     @  @   @@@@@     @    @     @ " << ENDL
+	  << " // @@@@@@@ @       @     @  @        @    @    @     @ " << ENDL
+	  << " // @     @ @       @     @  @  @     @    @    @     @ " << ENDL
+	  << " // @     @ @@@@@@@  @@@@@  @@@  @@@@@     @    @@@@@@@ " << ENDL                                  
 	  << "  " << ENDL
     << "  " << ENDL;
     std::cout << "How you would like to proceed?\n\n\t[O]pen an existing wallet\n\t[G]enerate a new wallet file\n\t[I]mport wallet from keys\n\t[M]nemonic seed import\n\t[E]xit.\n\n";
