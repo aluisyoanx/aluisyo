@@ -16,8 +16,9 @@ Aluisyo is a fairly launched coin without any premine, ico or dev fee.
 - Genesis Date: 25-02-19
 - Ticker: ANX
 - Address Prefix: aNX
-- POW Algo: Cryptonight Original
-- Max Supply: 200milion
+- POW Algo: Cryptonight Fast
+- Max Supply: 200 million
+- Block Time: 120 seconds
 - Block Reward: smoothly increasing, starting from 5 all the way up-to 50
 - Ports:
 - P2P: 18001
