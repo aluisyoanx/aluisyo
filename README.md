@@ -9,8 +9,11 @@ Maintained by Aluisyo.
 
 The Future Of Blockchain Banking
 
-Aluisyo is a decentralized cryptocurrency based on cryptonote with blockchain banking features and secure messaging.
+Aluisyo is a decentralized cryptocurrency based on cryptonote with enabled blockchain banking features and secure messaging.
+
 Aluisyo is a fairly launched coin without any premine, ico or dev fee.
+
+Aluisyo is a complete Solution for your Payments, messaging and banking needs, it provides instant privacy protected transactions and untraceable/self-destructive encrypted messaging transfers with extremely low processing fees in a decentralized peer-to-peer network.
 
 - Coin Name: Aluisyo
 - Genesis Date: 25-02-19
@@ -31,13 +34,16 @@ Aluisyo is a fairly launched coin without any premine, ico or dev fee.
 - Discord: [https://discord.gg/rbyNZRz](https://discord.gg/rbyNZRz)
 - Our BitcoinTalk: https://bitcointalk.org/index.php?topic=5114934
 - Our Telegram: https://t.me/joinchat/I5RElgnalLDhSHTQBjSluA
+- Our Twitter: https://www.twitter.com/aluisyonetwork
 
-### [Block Explorers] 
+### [Block Explorer] 
 - https://explorer.aluisyo.network/
-- https://node.aluisyo.network/
+
+### [Remote Node]
+- node.aluisyo.network:19000
 
 ### [Pools] 
-- https://cnpool.cc/anx
+- https://pool.aluisyo.network
 - https://coinsforhash.com/aluisyo/
 
 
@@ -60,6 +66,42 @@ Aluisyo is a fairly launched coin without any premine, ico or dev fee.
 
 If the build is successful the binaries will be in the src folder.
 
+Run ‘aluisyod’ for blockchain sync. After sync is complete (could take a long time) run ‘aluisyowallet’ for wallet creation/management.
+
+
+### macOS 10.12 (or higher)
+
+##### Prerequisites
+
+- A 64-bit Intel CPU
+- Command Line Tools (CLT) for Xcode:   xcode-select --install (Terminal command)
+- Homebrew
+- boost, cmake, git, gcc, python, make, git
+
+#### Building
+
+In Terminal:
+
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+- `brew install boost cmake git gcc python make`
+
+- `git clone https://github.com/aluisyonetwork/aluisyo-core.git`
+
+- `cd aluisyo-core`
+- `ln -s /Users/[username]/aluisyo-core/ cryptonote`
+- `mkdir build`
+- `cd build`
+- `cmake /Users/[username]/aluisyo-core/`
+- `make`     /* grab a cup of coffee, this will take a bit */
+
+**The successful binaries will be in the /Users/[username]/aluisyo-core/build/src
+
+Run ‘aluisyod’ for blockchain sync. After sync is complete (could take a long time) run ‘aluisyowallet’ for wallet creation/management.
+
+
+
+
 ### Windows 10
 
 ##### Prerequisites
@@ -81,6 +123,8 @@ If the build is successful the binaries will be in the src folder.
 - `msbuild aluisyo.sln /p:Configuration=Release /m`
 
 If the build is successful the binaries will be in the src/Release folder.
+
+Run ‘aluisyod’ for blockchain sync. After sync is complete (could take a long time) run ‘aluisyowallet’ for wallet creation/management.
 
 #### Special Thanks
 Special thanks goes out to the developers from The Circle Team (Conceal Network), Cryptonote, Bytecoin, Monero, Forknote, TurtleCoin, and Masari.
