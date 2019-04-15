@@ -30,11 +30,11 @@ Aluisyo is a complete Solution for your Payments, messaging and banking needs, i
 
 ## Resources
 - Web: [aluisyo.network](https://aluisyo.network/)
-- GitHub: [https://github.com/aluisyonetwork/aluisyo-core](https://github.com/aluisyonetwork/aluisyo-core)
+- GitHub: [https://github.com/aluisyoanx/aluisyo-core](https://github.com/aluisyoanx/aluisyo-core)
 - Discord: [https://discord.gg/rbyNZRz](https://discord.gg/rbyNZRz)
 - Our BitcoinTalk: https://bitcointalk.org/index.php?topic=5114934
 - Our Telegram: https://t.me/joinchat/I5RElgnalLDhSHTQBjSluA
-- Our Twitter: https://www.twitter.com/aluisyonetwork
+- Our Twitter: https://www.twitter.com/aluisyoanx
 
 ### [Block Explorer] 
 - https://explorer.aluisyo.network/
@@ -58,7 +58,7 @@ Aluisyo is a complete Solution for your Payments, messaging and banking needs, i
 
 #### Building
 
-- `git clone https://github.com/aluisyonetwork/aluisyo-core`
+- `git clone https://github.com/aluisyoanx/aluisyo-core`
 - `cd aluisyo-core`
 - `mkdir build && cd $_`
 - `cmake ..`
@@ -86,7 +86,7 @@ In Terminal:
 
 - `brew install boost cmake git gcc python make`
 
-- `git clone https://github.com/aluisyonetwork/aluisyo-core.git`
+- `git clone https://github.com/aluisyoanx/aluisyo-core.git`
 
 - `cd aluisyo-core`
 - `ln -s /Users/[username]/aluisyo-core/ cryptonote`
@@ -115,7 +115,7 @@ Run ‘aluisyod’ for blockchain sync. After sync is complete (could take a lon
 
 - From the start menu, open 'x64 Native Tools Command Prompt for vs2017' or run "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsMSBuildCmd.bat" from any command prompt.
 
-- `https://github.com/aluisyonetwork/aluisyo-core`
+- `https://github.com/aluisyoanx/aluisyo-core`
 - `cd aluisyo-core`
 - `mkdir build`
 - `cd build`
