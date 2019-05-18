@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2017 The Cryptonote developers
 // Copyright (c) 2016-2018, The Karbo developers
 // Copyright (c) 2018 The Circle Foundation
+// Copyright (c) 2019 Aluisyo
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -67,48 +68,6 @@ void print_genesis_tx_hex() {
   return;
 }
 
-// void print_genesis_tx_hex(const po::variables_map& vm) {
-  // std::vector<CryptoNote::AccountPublicAddress> targets;
- //  auto genesis_block_reward_addresses = command_line::get_arg(vm, arg_genesis_block_reward_address);
-
-//   Logging::ConsoleLogger logger;
-//   CryptoNote::CurrencyBuilder currencyBuilder(logger);
-
- //  CryptoNote::Currency currency = currencyBuilder.currency();
-
- //  for (const auto& address_string : genesis_block_reward_addresses) {
- //     CryptoNote::AccountPublicAddress address;
-   //  if (!currency.parseAccountAddressString(address_string, address)) {
-   //    std::cout << "Failed to parse address: " << address_string << std::endl;
-   //    return;
-  //   }
- //	//Print GENESIS_BLOCK_REWARD Mined Address
- //	std::cout << "Your SDN Pre-mined Address String is:  " << address_string << std::endl;
- //    targets.emplace_back(std::move(address));
-//   }
-
- //  if (targets.empty()) {
- //    if (CryptoNote::parameters::GENESIS_BLOCK_REWARD > 0) {
- //      std::cout << "Error: genesis block reward addresses are not defined" << std::endl;
- //    } else {
-
- //	  CryptoNote::Transaction tx = CryptoNote::CurrencyBuilder(logger).generateGenesisTransaction();
- //	  CryptoNote::BinaryArray txb = CryptoNote::toBinaryArray(tx);
- //	  std::string tx_hex = Common::toHex(txb);
-
-// 	  std::cout << "Insert this line into your coin configuration file as is: " << std::endl;
- //	  std::cout << "const char GENESIS_COINBASE_TX_HEX[] = \"" << tx_hex << "\";" << std::endl;
- //	}
-//   } else {
- //	CryptoNote::Transaction tx = CryptoNote::CurrencyBuilder(logger).generateGenesisTransaction(targets);
- //	CryptoNote::BinaryArray txb = CryptoNote::toBinaryArray(tx);
- //	std::string tx_hex = Common::toHex(txb);
-
- //	std::cout << "Modify this line into your concealX configuration file as is:  " << std::endl;
- //	std::cout << "const char GENESIS_COINBASE_TX_HEX[] = \"" << tx_hex << "\";" << std::endl;
-//   }
-//   return;
-// }
 
 JsonValue buildLoggerConfiguration(Level level, const std::string& logfile) {
   JsonValue loggerConfiguration(JsonValue::OBJECT);
@@ -130,21 +89,21 @@ JsonValue buildLoggerConfiguration(Level level, const std::string& logfile) {
 }
 
 void renameDataDir() {
-  std::string concealXDir = Tools::getDefaultDataDirectory();
-  boost::filesystem::path concealXDirPath(concealXDir);
-  if (boost::filesystem::exists(concealXDirPath)) {
+  std::string aluisyoDir = Tools::getDefaultDataDirectory();
+  boost::filesystem::path aluisyoDirPath(aluisyoDir);
+  if (boost::filesystem::exists(aluisyoDirPath)) {
     return;
   }
 
-  std::string dataDirPrefix = concealXDir.substr(0, concealXDir.size() + 1 - sizeof(CRYPTONOTE_NAME));
+  std::string dataDirPrefix = aluisyoDir.substr(0, aluisyoDir.size() + 1 - sizeof(CRYPTONOTE_NAME));
   boost::filesystem::path cediDirPath(dataDirPrefix + "BXC");
 
   if (boost::filesystem::exists(cediDirPath)) {
-    boost::filesystem::rename(cediDirPath, concealXDirPath);
+    boost::filesystem::rename(cediDirPath, aluisyoDirPath);
   } else {
     boost::filesystem::path BcediDirPath(dataDirPrefix + "Bcedi");
     if (boost::filesystem::exists(boost::filesystem::path(BcediDirPath))) {
-		boost::filesystem::rename(BcediDirPath, concealXDirPath);
+		boost::filesystem::rename(BcediDirPath, aluisyoDirPath);
     }
   }
 }
@@ -152,7 +111,7 @@ void renameDataDir() {
 int main(int argc, char* argv[])
 {
 
-#ifdef WIN32
+#ifdef _WIN32
   _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 #endif
 
@@ -170,7 +129,7 @@ int main(int argc, char* argv[])
     command_line::add_arg(desc_cmd_only, arg_os_version);
     command_line::add_arg(desc_cmd_only, command_line::arg_data_dir, Tools::getDefaultDataDirectory());
     command_line::add_arg(desc_cmd_only, arg_config_file);
-	  command_line::add_arg(desc_cmd_sett, arg_set_fee_address);
+	command_line::add_arg(desc_cmd_sett, arg_set_fee_address);
     command_line::add_arg(desc_cmd_sett, arg_log_file);
     command_line::add_arg(desc_cmd_sett, arg_log_level);
     command_line::add_arg(desc_cmd_sett, arg_console);
@@ -336,7 +295,7 @@ int main(int argc, char* argv[])
 
     logger(INFO) << "<< Daemon.cpp << " << "Starting core rpc server on address " << rpcConfig.getBindAddress();
   
-    /* set address for remote node fee */
+    /* Set address for remote node fee */
   	if (command_line::has_arg(vm, arg_set_fee_address)) {
 	  std::string addr_str = command_line::get_arg(vm, arg_set_fee_address);
 	  if (!addr_str.empty()) {
@@ -351,7 +310,8 @@ int main(int argc, char* argv[])
       }
 	  }
   
-    /* set secret view-key to confirm remote node fee */
+    /* This sets the view-key so we can confirm that
+       the fee is part of the transaction blob */       
     if (command_line::has_arg(vm, arg_set_view_key)) {
       std::string vk_str = command_line::get_arg(vm, arg_set_view_key);
 	    if (!vk_str.empty()) {
@@ -360,7 +320,6 @@ int main(int argc, char* argv[])
       }
     }
  
-  
     rpcServer.start(rpcConfig.bindIp, rpcConfig.bindPort);
     logger(INFO) << "<< Daemon.cpp << " "Core rpc server started ok";
 

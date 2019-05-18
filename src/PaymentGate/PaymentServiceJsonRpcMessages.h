@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2017 The Cryptonote developers
 // Copyright (c) 2018 The Circle Foundation
+// Copyright (c) 2019 Aluisyo
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -187,6 +188,7 @@ struct TransferRpcInfo {
   uint8_t type;
   std::string address;
   int64_t amount;
+  std::string message;  
 
   void serialize(CryptoNote::ISerializer& serializer);
 };
@@ -196,6 +198,7 @@ struct TransactionRpcInfo {
   std::string transactionHash;
   uint32_t blockIndex;
   uint64_t timestamp;
+  uint32_t confirmations;
   bool isBase;
   uint64_t unlockTime;
   int64_t amount;
@@ -371,6 +374,7 @@ struct GetMessagesFromExtra {
 struct EstimateFusion {
   struct Request {
     uint64_t threshold;
+    std::vector<std::string> addresses;
 
     void serialize(CryptoNote::ISerializer& serializer);
   };
@@ -386,7 +390,9 @@ struct EstimateFusion {
 struct SendFusionTransaction {
   struct Request {
     uint64_t threshold;
-    uint32_t mixin;
+    uint32_t anonymity = 0;
+    std::vector<std::string> addresses;
+    std::string destinationAddress;
 
     void serialize(CryptoNote::ISerializer& serializer);
   };

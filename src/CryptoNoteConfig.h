@@ -21,11 +21,10 @@ const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW											= 10; /* 20 minute
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT											= 60 * 60 * 2; /* two hours */
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V1										= 360; /* changed for LWMA3 */
 const uint64_t CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE											= 10; /* 20 minutes */
-
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW											= 30;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V1											= 11; /* changed for LWMA3 */
 
-const uint64_t MONEY_SUPPLY																	= UINT64_C(200000000000000); /* max supply: 200M ANX */
+const uint64_t MONEY_SUPPLY																	= UINT64_C(200000000000000); /* max supply:200M ANX */
 
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX													= 0;
 const size_t   ZAWY_DIFFICULTY_FIX															= 1;
@@ -85,7 +84,7 @@ const size_t   CRYPTONOTE_OPTIMIZE_SIZE														= 100; /* proportional to C
 
 const uint64_t CRYPTONOTE_MEMPOOL_TX_LIVETIME												= (60 * 60 * 12); /* 12 hours in seconds */
 const uint64_t CRYPTONOTE_MEMPOOL_TX_FROM_ALT_BLOCK_LIVETIME								= (60 * 60 * 24); /* 23 hours in seconds */
-const uint64_t CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL 					= 7; /* CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL * CRYPTONOTE_MEMPOOL_TX_LIVETIME = time to forget tx */
+const uint64_t CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL					= 7; /* CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL * CRYPTONOTE_MEMPOOL_TX_LIVETIME = time to forget tx */
 
 const size_t   FUSION_TX_MAX_SIZE															= CRYPTONOTE_MAX_TX_SIZE_LIMIT * 2;
 const size_t   FUSION_TX_MIN_INPUT_COUNT													= 12;
@@ -97,7 +96,7 @@ const uint64_t UPGRADE_HEIGHT_V3															= 12750; /* Cryptonight-Fast */
 const uint64_t UPGRADE_HEIGHT_V4															= 26490; /* MixIn 2 */
 const uint64_t UPGRADE_HEIGHT_V5															= 26495; /* Deposits 2.0, Investments 1.0 */
 const uint64_t UPGRADE_HEIGHT_V6															= 26500; /* LWMA3 */
-const uint64_t UPGRADE_HEIGHT_V7															= 195765; /* Cryptoight Conceal */
+const uint64_t UPGRADE_HEIGHT_V7															= 199999; /* TBD */
 const unsigned UPGRADE_VOTING_THRESHOLD														= 90; // percent
 const size_t   UPGRADE_VOTING_WINDOW														= EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; 
 const size_t   UPGRADE_WINDOW																= EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; 
@@ -110,58 +109,58 @@ const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]											= "blockindexes.dat"
 const char     CRYPTONOTE_BLOCKSCACHE_FILENAME[]											= "blockscache.dat";
 const char     CRYPTONOTE_POOLDATA_FILENAME[]												= "poolstate.bin";
 const char     P2P_NET_DATA_FILENAME[]														= "p2pstate.bin";
-const char     CRYPTONOTE_BLOCKCHAIN_INDICES_FILENAME[]      								= "blockchainindices.dat";
-const char     MINER_CONFIG_FILE_NAME[]                      								= "miner_conf.json";
+const char     CRYPTONOTE_BLOCKCHAIN_INDICES_FILENAME[]										= "blockchainindices.dat";
+const char     MINER_CONFIG_FILE_NAME[]														= "miner_conf.json";
 
-} // parameters
+} // params
 
-const uint64_t START_BLOCK_REWARD															= (UINT64_C(5000) * parameters::POINT); // start reward 
-const uint64_t FOUNDATION_TRUST																= (UINT64_C(0) * parameters::COIN); // locked funds to secure network  (lol i was drunk asf)
-const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(50) * parameters::COIN); // max reward
-const uint64_t REWARD_INCREASE_INTERVAL				= (UINT64_C(21900)); // aprox. 1 month (+ 0.25 ANX increment per month)
+const uint64_t START_BLOCK_REWARD															= (UINT64_C(5000) * parameters::POINT); // start block reward 
+const uint64_t FOUNDATION_TRUST																= (UINT64_C(0) * parameters::COIN); // No Premine
+const uint64_t MAX_BLOCK_REWARD																= (UINT64_C(50) * parameters::COIN); // max block reward
+const uint64_t REWARD_INCREASE_INTERVAL														= (UINT64_C(21900)); // aprox. 1 month (+ 0.25 ANX increment per month)
 
-const char     CRYPTONOTE_NAME[]                             	= "aluisyo";
-const char     GENESIS_COINBASE_TX_HEX[]			= "010a01ff0001c096b102029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121014d669c1540f08c6af42bcbf50623514a085bf898292cd8e90b6f88c9abeaef94";
-const uint32_t GENESIS_NONCE                         	        = 10000;
-const uint64_t GENESIS_TIMESTAMP				= 1551106337;
-const uint8_t  TRANSACTION_VERSION_1				=  1;
-const uint8_t  TRANSACTION_VERSION_2				=  2;
-const uint8_t  BLOCK_MAJOR_VERSION_1				=  1; // (Consensus I)
-const uint8_t  BLOCK_MAJOR_VERSION_2				=  2; // (Consensus II)
-const uint8_t  BLOCK_MAJOR_VERSION_3				=  3; // (Consensus III)
-const uint8_t  BLOCK_MAJOR_VERSION_4				=  4; // LWMA3
-const uint8_t  BLOCK_MAJOR_VERSION_7				=  7; /* Cryptonight Conceal */
-const uint8_t  BLOCK_MINOR_VERSION_0				=  0;
-const uint8_t  BLOCK_MINOR_VERSION_1				=  1;
+const char     CRYPTONOTE_NAME[]															= "aluisyo";
+const char     GENESIS_COINBASE_TX_HEX[]													= "010a01ff0001c096b102029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121014d669c1540f08c6af42bcbf50623514a085bf898292cd8e90b6f88c9abeaef94";
+const uint32_t GENESIS_NONCE                         	      							    = 10000;
+const uint64_t GENESIS_TIMESTAMP															= 1551106337;
+const uint8_t  TRANSACTION_VERSION_1														=  1;
+const uint8_t  TRANSACTION_VERSION_2														=  2;
+const uint8_t  BLOCK_MAJOR_VERSION_1														=  1; // (Consensus I)
+const uint8_t  BLOCK_MAJOR_VERSION_2														=  2; // (Consensus II)
+const uint8_t  BLOCK_MAJOR_VERSION_3														=  3; // (Consensus III)
+const uint8_t  BLOCK_MAJOR_VERSION_4														=  4; // LWMA3
+const uint8_t  BLOCK_MAJOR_VERSION_7														=  7; /* Cryptonight Conceal */
+const uint8_t  BLOCK_MINOR_VERSION_0														=  0;
+const uint8_t  BLOCK_MINOR_VERSION_1														=  1;
 
-const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT		= 10000; // by default, blocks ids count in synchronizing
-const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT		= 128; // by default, blocks count in blocks downloading
-const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT		= 1000;
+const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT										= 10000; // by default, blocks ids count in synchronizing
+const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT											= 128; // by default, blocks count in blocks downloading
+const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT										= 1000;
 
-const int      P2P_DEFAULT_PORT					= 18001;
-const int      RPC_DEFAULT_PORT					= 19000;
+const int      P2P_DEFAULT_PORT																= 18001;
+const int      RPC_DEFAULT_PORT																= 19000;
 
 
 /* P2P Network Configuration Section - This defines our current P2P network version
 and the minimum version for communication between nodes */
-const uint8_t  P2P_CURRENT_VERSION                           = 1;
-const uint8_t  P2P_MINIMUM_VERSION                           = 1;
-const uint8_t  P2P_UPGRADE_WINDOW                            = 2;
+const uint8_t  P2P_CURRENT_VERSION															= 1;
+const uint8_t  P2P_MINIMUM_VERSION															= 1;
+const uint8_t  P2P_UPGRADE_WINDOW															= 2;
 
-const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT			= 1000;
-const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT			= 5000;
+const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT												= 1000;
+const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT												= 5000;
 
-const size_t   P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE		= 64 * 1024 * 1024; // 64MB
-const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT			= 8;
-const size_t   P2P_DEFAULT_WHITELIST_CONNECTIONS_PERCENT	= 70; // percent
-const uint32_t P2P_DEFAULT_HANDSHAKE_INTERVAL			= 60; // seconds
-const uint32_t P2P_DEFAULT_PACKET_MAX_SIZE			= 50000000; // 50000000 bytes maximum packet size
-const uint32_t P2P_DEFAULT_PEERS_IN_HANDSHAKE			= 250;
-const uint32_t P2P_DEFAULT_CONNECTION_TIMEOUT			= 5000; // 5 seconds
-const uint32_t P2P_DEFAULT_PING_CONNECTION_TIMEOUT		= 2000; // 2 seconds
-const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT			= 60 * 2 * 1000; // 2 minutes
-const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT		= 5000; // 5 seconds
-const char     P2P_STAT_TRUSTED_PUB_KEY[]			= "a9206a9e0l0e30986afde49lubiba02esf30afdb44304673h460a9sa34bf5s5p";
+const size_t   P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE											= 64 * 1024 * 1024; // 64MB
+const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT												= 8;
+const size_t   P2P_DEFAULT_WHITELIST_CONNECTIONS_PERCENT									= 70; // percent
+const uint32_t P2P_DEFAULT_HANDSHAKE_INTERVAL												= 60; // seconds
+const uint32_t P2P_DEFAULT_PACKET_MAX_SIZE													= 50000000; // 50000000 bytes maximum packet size
+const uint32_t P2P_DEFAULT_PEERS_IN_HANDSHAKE												= 250;
+const uint32_t P2P_DEFAULT_CONNECTION_TIMEOUT												= 5000; // 5 seconds
+const uint32_t P2P_DEFAULT_PING_CONNECTION_TIMEOUT											= 2000; // 2 seconds
+const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT													= 60 * 2 * 1000; // 2 minutes
+const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT											= 5000; // 5 seconds
+const char     P2P_STAT_TRUSTED_PUB_KEY[]													= "a9206a9e0l0e30986afde49lubiba02esf30afdb44304673h460a9sa34bf5s5p";
 
 // Seed Nodes
 const std::initializer_list<const char*> SEED_NODES = {
@@ -188,7 +187,13 @@ const std::initializer_list<CheckpointData> CHECKPOINTS = {
 	{10000, "6f44f15858b4eb7afe814b3d0e1945118d71909ae11f20e06c17fcf0e33e2f4a"},
 	{15000, "276162175b19991a9bc7650d3c8a9dcce0a5daad5cac5b7387f725a03a337290"},
 	{20000, "a113901a9d3d6f13b710367e9e0919d0f4155612e56b2eb23d99ed7b1ff044b8"},
-	{25000, "005ac409b5e4c1dbdbde0a74378a919cf725caa5b6f782e7875913c0bde99e21"}
+	{25000, "005ac409b5e4c1dbdbde0a74378a919cf725caa5b6f782e7875913c0bde99e21"},
+	{30000, "faab8771a177dc4a15acd75f1228cd999c078b9cdf481f14f84c9a0def7b8752"},
+	{35000, "600592d5dbb182a8a6bb0ac4a2fc52e3fb539c45690dd17ddcbd9673a211a7b6"},
+	{40000, "780207cfbf37e68a88d8abe7c744ad86351e4412be17bc22708007d63b26b687"},
+	{45000, "1a9540dbd562cadcf69ee8cadeeb7ffdff0fdb5ea3205dced9001188eb0b6e58"},
+	{50000, "ee76d5295759fb8bf6feb8b916b649eb0703aeb5cd7baf52cf2132c1fc41c27e"}
+	
 };
 
 } // CryptoNote

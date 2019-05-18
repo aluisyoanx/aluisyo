@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2017 The Cryptonote developers
 // Copyright (c) 2018 The Circle Foundation
+// Copyright (c) 2019 Aluisyo
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -519,16 +520,16 @@ bool CryptoNoteProtocolHandler::on_connection_synchronized() {
   bool val_expected = false;
   if (m_synchronized.compare_exchange_strong(val_expected, true)) {
     logger(Logging::INFO) << ENDL << "********************************************************************************" << ENDL
-	  << "  " << ENDL
+      << "  " << ENDL
 	  << " //    @    @       @     @ @@@  @@@@@  @     @ @@@@@@@ " << ENDL
 	  << " //   @ @   @       @     @  @  @     @  @   @  @     @ " << ENDL
 	  << " //  @   @  @       @     @  @  @         @ @   @     @ " << ENDL
 	  << " // @     @ @       @     @  @   @@@@@     @    @     @ " << ENDL
 	  << " // @@@@@@@ @       @     @  @        @    @    @     @ " << ENDL
 	  << " // @     @ @       @     @  @  @     @    @    @     @ " << ENDL
-	  << " // @     @ @@@@@@@  @@@@@  @@@  @@@@@     @    @@@@@@@ " << ENDL                                  
-	  << "  " << ENDL
-      << "You are now synchronized with the Aluisyo network. You may now start aluisyowallet." << ENDL
+	  << " // @     @ @@@@@@@  @@@@@  @@@  @@@@@     @    @@@@@@@ " << ENDL
+      << "  " << ENDL
+      << "You are now synchronized with Aluisyo. You may now start aluisyowallet." << ENDL
       << "Please note, that the blockchain will be saved only after you quit the daemon" << ENDL
       << "with the \"exit\" command or if you use the \"save\" command." << ENDL
       << "Otherwise, you will possibly need to synchronize the blockchain again." << ENDL

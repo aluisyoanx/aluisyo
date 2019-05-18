@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2017 The Cryptonote developers
 // Copyright (c) 2018 The Circle Foundation
+// Copyright (c) 2019 Aluisyo
 // Copyright (c) 2016-2018, The Karbo developers
 
 // Distributed under the MIT/X11 software license, see the accompanying
@@ -104,7 +105,7 @@ std::vector<uint32_t> Checkpoints::getCheckpointHeights() const {
 
 bool Checkpoints::load_checkpoints_from_dns()
 {
-  std::string domain("checkpoints.aluisyonetwork.id");
+  std::string domain("checkpoints.aluisyo.network");
   std::vector<std::string>records;
 
   logger(Logging::INFO) << "<< Checkpoints.cpp << " << "Fetching DNS checkpoint records from " << domain;

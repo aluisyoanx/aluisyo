@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2017 The Cryptonote developers
 // Copyright (c) 2018 The Circle Foundation
+// Copyright (c) 2019 Aluisyo
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -136,12 +137,14 @@ void TransferRpcInfo::serialize(CryptoNote::ISerializer& serializer) {
   serializer(type, "type");
   serializer(address, "address");
   serializer(amount, "amount");
+  serializer(message, "message");  
 }
 
 void TransactionRpcInfo::serialize(CryptoNote::ISerializer& serializer) {
   serializer(state, "state");
   serializer(transactionHash, "transactionHash");
   serializer(blockIndex, "blockIndex");
+  serializer(confirmations, "confirmations");  
   serializer(timestamp, "timestamp");
   serializer(isBase, "isBase");
   serializer(unlockTime, "unlockTime");
@@ -150,6 +153,7 @@ void TransactionRpcInfo::serialize(CryptoNote::ISerializer& serializer) {
   serializer(transfers, "transfers");
   serializer(extra, "extra");
   serializer(paymentId, "paymentId");
+
 }
 
 void GetTransaction::Request::serialize(CryptoNote::ISerializer& serializer) {
@@ -314,6 +318,8 @@ void EstimateFusion::Request::serialize(CryptoNote::ISerializer& serializer) {
   if (!serializer(threshold, "threshold")) {
     throw RequestSerializationError();
   }
+
+  serializer(addresses, "addresses");
 }
 
 void EstimateFusion::Response::serialize(CryptoNote::ISerializer& serializer) {
@@ -325,9 +331,13 @@ void SendFusionTransaction::Request::serialize(CryptoNote::ISerializer& serializ
   if (!serializer(threshold, "threshold")) {
     throw RequestSerializationError();
   }
-  if (!serializer(mixin, "mixin")) {
+
+  if (!serializer(anonymity, "anonymity")) {
     throw RequestSerializationError();
   }
+
+  serializer(addresses, "addresses");
+  serializer(destinationAddress, "destinationAddress");
 }
 
 void SendFusionTransaction::Response::serialize(CryptoNote::ISerializer& serializer) {

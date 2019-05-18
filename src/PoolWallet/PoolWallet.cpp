@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2017 The Cryptonote developers
 // Copyright (c) 2018 The Circle Foundation
+// Copyright (c) 2019 Aluisyo
 //
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -703,15 +704,15 @@ bool pool_wallet::init(const boost::program_options::variables_map& vm) {
 
   if (m_generate_new.empty() && m_wallet_file_arg.empty()) {
     std::cout << "  " << ENDL
-	  << "  " << ENDL
+    << "  " << ENDL
 	  << " //    @    @       @     @ @@@  @@@@@  @     @ @@@@@@@ " << ENDL
 	  << " //   @ @   @       @     @  @  @     @  @   @  @     @ " << ENDL
 	  << " //  @   @  @       @     @  @  @         @ @   @     @ " << ENDL
 	  << " // @     @ @       @     @  @   @@@@@     @    @     @ " << ENDL
 	  << " // @@@@@@@ @       @     @  @        @    @    @     @ " << ENDL
 	  << " // @     @ @       @     @  @  @     @    @    @     @ " << ENDL
-	  << " // @     @ @@@@@@@  @@@@@  @@@  @@@@@     @    @@@@@@@ " << ENDL                                  
-	  << "  " << ENDL
+	  << " // @     @ @@@@@@@  @@@@@  @@@  @@@@@     @    @@@@@@@ " << ENDL
+    << "  " << ENDL
     << "  " << ENDL;
     std::cout << "How you would like to proceed?\n\n\t[O]pen an existing wallet\n\t[G]enerate a new wallet file\n\t[I]mport wallet from keys\n\t[M]nemonic seed import\n\t[E]xit.\n\n";
     char c;
@@ -1695,7 +1696,7 @@ void pool_wallet::printConnectionError() const {
 
 
 int main(int argc, char* argv[]) {
-#ifdef WIN32
+#ifdef _WIN32
   _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
 
