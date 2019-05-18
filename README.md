@@ -1,5 +1,5 @@
 # Aluisyo Core (CLI)
-Latest Release: v0.0.2
+Latest Release: v0.0.4
 Maintained by Aluisyo.
 
 ## Warning: This is Highly Experimental for testing purposes, Use at own Risk!
