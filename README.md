@@ -45,6 +45,7 @@ Aluisyo is a complete Solution for your Payments, messaging and banking needs, i
 ### [Pools] 
 - https://pool.aluisyo.network
 - https://coinsforhash.com/aluisyo/
+- https://anx.cryptonote.club/
 
 
 ## Compiling Aluisyo from source
