@@ -96,7 +96,7 @@ const uint64_t UPGRADE_HEIGHT_V3															= 12750; /* Cryptonight-Fast */
 const uint64_t UPGRADE_HEIGHT_V4															= 26490; /* MixIn 2 */
 const uint64_t UPGRADE_HEIGHT_V5															= 26495; /* Deposits 2.0, Investments 1.0 */
 const uint64_t UPGRADE_HEIGHT_V6															= 26500; /* LWMA3 */
-const uint64_t UPGRADE_HEIGHT_V7															= 199999; /* TBD */
+const uint64_t UPGRADE_HEIGHT_V7															= 19999999; /* TBD */
 const unsigned UPGRADE_VOTING_THRESHOLD														= 90; // percent
 const size_t   UPGRADE_VOTING_WINDOW														= EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; 
 const size_t   UPGRADE_WINDOW																= EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; 
@@ -165,8 +165,8 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]													= "a9206a9e0l0e30986afde49
 // Seed Nodes
 const std::initializer_list<const char*> SEED_NODES = {
 		"193.37.214.191:18001", // seed one
-		"68.183.17.228:18001", // seed two
-		"23.96.93.180:18001" // seed three
+		"185.206.147.124:18001", // seed two
+		"64.52.23.159:18001" // seed three
 };
 
 struct CheckpointData {
