@@ -4,6 +4,7 @@ Maintained by Aluisyo.
 
 ## Warning: This is Highly Experimental for testing purposes, Use at own Risk!
 
+
 ## Information
 ### Aluisyo
 
@@ -43,8 +44,6 @@ Aluisyo is a complete Solution for your Payments, messaging and banking needs, i
 - node.aluisyo.network:19000
 
 ### [Pools] 
-- https://pool.aluisyo.network
-- https://coinsforhash.com/aluisyo/
 - https://anx.cryptonote.club/
 
 
